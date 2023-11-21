@@ -7,7 +7,7 @@ import * as THREE from 'three'
 import { Mesh } from 'three'
 const Cube =()=>{
     const color = new THREE.Color("#F4E869")
-    const mesh = useRef<Mesh>(null)
+    const mesh = useRef(null)
     useFrame((state,delta) => {
         if (mesh.current) {
           //mesh.current.rotation.x += delta*0.25;
