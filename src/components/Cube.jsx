@@ -1,11 +1,13 @@
 'use client'
+
 import {useRef} from 'react'
 import { Canvas ,useFrame,useLoader} from "@react-three/fiber";
 import {TextureLoader} from 'three/src/loaders/TextureLoader'
 import * as THREE from 'three'
+import { Mesh } from 'three'
 const Cube =()=>{
     const color = new THREE.Color("#F4E869")
-    const mesh = useRef(null)
+    const mesh = useRef<Mesh>(null)
     useFrame((state,delta) => {
         if (mesh.current) {
           //mesh.current.rotation.x += delta*0.25;
